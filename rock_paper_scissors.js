@@ -6,7 +6,7 @@ function getUserChoice(userInput){
 	return 'invalid'}
 	}
 	
-	console.log(getUserChoice('ROCK'));
+	console.log(getUserChoice('cherrybomb'));
 
 function getComputerChoice(){
  let choice = Math.floor(Math.random() * 3);
@@ -27,7 +27,7 @@ function getComputerChoice(){
  }
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
 function determineWinner(userChoice,computerChoice) {
 	if(userChoice === computerChoice){
@@ -52,7 +52,15 @@ function determineWinner(userChoice,computerChoice) {
 	}
 }
 
-console.log(determineWinner('scissors','paper'));
 
 
+function playGame(){
+let userChoice = getUserChoice('paper');
+let computerChoice = getComputerChoice();
+
+console.log(determineWinner(userChoice,computerChoice));
+
+}
+
+playGame();
 
