@@ -10,8 +10,21 @@ function getUserChoice(userInput){
 
 function getComputerChoice(){
  let choice = Math.floor(Math.random() * 3);
-
-	return choice;
+ 
+ switch(choice){
+ case 0: 
+ return 'rock'
+ break;
+ case 1:
+ return 'paper'
+ break;
+ case 2:
+ return 'scissors'
+ break;
+ default:
+ return 'rocket'
+ break;
+ }
 }
 
 console.log(getComputerChoice());
