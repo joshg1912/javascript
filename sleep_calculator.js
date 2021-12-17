@@ -34,3 +34,12 @@ return getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wedne
 }
 
 console.log(getActualSleepHours());
+
+
+
+function idealSleepHours(){
+let idealHours = 8 * 7
+return idealHours
+}
+
+console.log(idealSleepHours());
