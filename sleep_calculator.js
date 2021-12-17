@@ -27,6 +27,7 @@ day = day.toLowerCase();
 	}
 };
 
+//tests if toLowerCase method works w all caps
 //console.log(getSleepHours('FRIDAY'));
 
 function getActualSleepHours(){
