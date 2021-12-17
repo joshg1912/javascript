@@ -43,3 +43,23 @@ return idealHours
 }
 
 console.log(idealSleepHours());
+
+
+
+function calculateSleepDebt(){
+	if(idealSleepHours() === getActualSleepHours()){
+	return 'Youre right on track'}
+	     else if(getActualSleepHours() < idealSleepHours()){
+	     let difference = idealSleepHours() - getActualSleepHours()
+	     return `Youre not sleeping enough! Add ${difference} hours to your sleep schedule to get on track.`
+	     }
+	          else if(idealSleepHours() > getActualSleepHours()){
+	          let difference = getActualSleepHours() - idealSleepHours()
+	          return `Youre over sleeping by ${difference} hours!`
+	          }
+}
+
+
+console.log(calculateSleepDebt());
+
+
