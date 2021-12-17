@@ -39,12 +39,14 @@ function determineWinner(userChoice,computerChoice) {
 	else {
 	return 'user wins'}
 	}
+	
 	if(userChoice === 'paper'){
 	if(computerChoice ==='scissors'){
 	return 'computer wins' 
 	} else {
 	return 'user wins'}
 	}
+	
 	if(userChoice === 'scissors'){
 	if (computerChoice === 'rock'){
 	return 'computer wins'} else {
@@ -55,7 +57,7 @@ function determineWinner(userChoice,computerChoice) {
 
 
 function playGame(){
-let userChoice = getUserChoice('paper');
+let userChoice = getUserChoice('rock');
 let computerChoice = getComputerChoice();
 
 console.log(determineWinner(userChoice,computerChoice));
