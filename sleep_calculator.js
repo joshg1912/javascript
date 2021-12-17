@@ -33,16 +33,16 @@ function getActualSleepHours(){
 return getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wednesday') + getSleepHours('thursday') + getSleepHours('friday') + getSleepHours('saturday') + getSleepHours('sunday')
 }
 
-console.log(getActualSleepHours());
+//console.log(getActualSleepHours());
 
 
-
+//calculates ideal hours by multiplying ideal hours(8) times days of the week (7)
 function idealSleepHours(){
 let idealHours = 8 * 7
 return idealHours
 }
 
-console.log(idealSleepHours());
+//console.log(idealSleepHours());
 
 
 
