@@ -60,7 +60,4 @@ function calculateSleepDebt(){
 	          }
 }
 
-
-console.log(calculateSleepDebt());
-
-
+calculateSleepDebt();
