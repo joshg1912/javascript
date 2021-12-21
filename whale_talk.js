@@ -1,4 +1,4 @@
-let input = 'avocado'
+let input = 'turpentine and turtles'
 
 const vowels = ['a', 'e', 'i', 'o', 'u']
 
@@ -9,8 +9,13 @@ for(let i = 0; i < input.length; i++){
    if(input[i] === vowels[o]){
    resultArray.push(input[i]);
    }
-
+  }
+  if(input[i] === 'e'){
+  resultArray.push(input[i])
+  }
+  if(input[i] === 'u'){
+  resultArray.push(input[i]);
   }
 }
 
-console.log(resultArray)
+console.log(resultArray.join(' ').toUpperCase());
