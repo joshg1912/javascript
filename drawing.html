@@ -3,8 +3,12 @@
 <canvas width="600" height="600"></canvas>
 <script>
 
-let canvas = document.querySelector('canvas');
-const context = canvas.getContext('2d')'
+const canvas = document.querySelector('canvas');
+const context = canvas.getContext('2d')
+
+context.beginPath();
+context.rect(100,100,400,400);
+context.stroke();
 
 </script>
 
