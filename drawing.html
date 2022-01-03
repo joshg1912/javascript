@@ -10,13 +10,17 @@ const context = canvas.getContext('2d')
 context.lineWidth = 3.5
 
 
-//makes a clear rectangle
+
+
 /*
-context.beginPath();
-context.rect(100,100,400,400);
-context.stroke();
+	makes a clear rectangle
+	context.beginPath();
+	context.rect(100,100,400,400);
+	context.stroke();
 */
 
+
+//use this in conditional to get an even spread of smaller squares
 Math.random()
 
 const width= 100
@@ -28,15 +32,18 @@ for(i = 0; i < 5; i ++){
 	x = 100 * i
 	y = 100 * j
 	context.beginPath();
-	//rect(X,Y,WIDTH,HEIGHT)
+	
+	//rectangle syntax: rect(X, Y, Height, Width)
 	context.rect(x, y, height, width);
 	context.stroke();
+	
 	
 	
 	if(Math.random() < 0.4){
 	context.lineWidth = 7
 	context.beginPath();
-	context.rect(x + 8, y + 8, height - 16, width - 16)
+	//context.rect(x + 8, y + 8, height - 16, width - 16)
+	context.fillRect(x + 8, y + 8, height - 16, width - 16)
 	context.stroke();
 	}
 	}
