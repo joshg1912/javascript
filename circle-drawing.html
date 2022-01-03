@@ -15,6 +15,17 @@ const context = canvas.getContext('2d');
 	context.stroke();
 */
 
+const radius = 50
+
+for(i = 0; i < 5; i ++) {
+	for(j = 0; j < 5; j ++){
+	context.beginPath();
+	context.arc(100 * j, 100 * i, radius, 0, 2 * Math.PI);
+	context.stroke();
+			
+	}
+}
+
 
 
 </script>
