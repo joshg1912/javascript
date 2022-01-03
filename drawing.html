@@ -3,12 +3,44 @@
 <canvas width="600" height="600"></canvas>
 <script>
 
+//creates canvas
 const canvas = document.querySelector('canvas');
+//creates the content to put on canvas
 const context = canvas.getContext('2d')
+context.lineWidth = 3.5
 
+
+//makes a clear rectangle
+/*
 context.beginPath();
 context.rect(100,100,400,400);
 context.stroke();
+*/
+
+Math.random()
+
+const width= 100
+const height = 100
+let x,y;
+
+for(i = 0; i < 5; i ++){
+	for(j = 0; j < 5; j ++){
+	x = 100 * i
+	y = 100 * j
+	context.beginPath();
+	//rect(X,Y,WIDTH,HEIGHT)
+	context.rect(x, y, height, width);
+	context.stroke();
+	
+	
+	if(Math.random() < 0.4){
+	context.lineWidth = 7
+	context.beginPath();
+	context.rect(x + 8, y + 8, height - 16, width - 16)
+	context.stroke();
+	}
+	}
+}
 
 </script>
 
