@@ -1,13 +1,11 @@
 <html>
+<title>My Javascript Drawing</title>
 <body>
 <canvas width="500" height="500"></canvas>
 
 <script>
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
-
-
-
 
 /*
 	creates a clear circle
@@ -16,7 +14,6 @@ const context = canvas.getContext('2d');
 	context.arc(100,100, 50, 0, 2 * Math.PI);
 	context.stroke();
 */
-
 const radius = 50
 let x,y;
 for(i = 0; i < 5; i ++) {
@@ -38,23 +35,14 @@ for(i = 0; i < 5; i ++) {
 	context.arc(x * j, y * i, radius - 25, 0, 2 * Math.PI);
 	context.stroke();
 	
-	if(Math.random() < 0.3){
+	if(Math.random() < 0.35){
 	context.beginPath();
 	context.arc(x * j, y * i, radius - 35, 0, 2 * Math.PI);
 	context.strokeStyle = 'red';
 	context.stroke();
-	}
-	
-	
-			
+	}	
 	}
 }
-
-
-
 </script>
 </body>
-
-
-
 </html>
