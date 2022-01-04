@@ -1,9 +1,13 @@
 <html>
 <title>My Javascript Drawing</title>
-<body>
+<body onload = "Javascript:autoRefresh(5000);">
 <canvas width="500" height="500"></canvas>
 
 <script>
+
+function autoRefresh(t) {
+ setTimeout("location.reload(true);", t);
+}
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
 
