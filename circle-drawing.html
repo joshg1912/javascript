@@ -1,6 +1,6 @@
 <html>
 <title>My Javascript Drawing</title>
-<body onload = "Javascript:autoRefresh(5000);">
+<body onload = "Javascript:autoRefresh(3000);">
 <canvas width="500" height="500"></canvas>
 
 <script>
@@ -10,6 +10,7 @@ function autoRefresh(t) {
 }
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
+context.lineWidth = 5;
 
 /*
 	creates a clear circle
@@ -37,12 +38,14 @@ for(i = 0; i < 5; i ++) {
 	
 	context.beginPath();
 	context.arc(x * j, y * i, radius - 25, 0, 2 * Math.PI);
+	context.fill();
 	context.stroke();
 	
 	if(Math.random() < 0.35){
 	context.beginPath();
-	context.arc(x * j, y * i, radius - 35, 0, 2 * Math.PI);
+	context.arc(x * j, y * i + 4, radius - 35, 0, 2 * Math.PI);
 	context.strokeStyle = 'red';
+	context.fill();
 	context.stroke();
 	}	
 	}
