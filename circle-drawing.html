@@ -1,6 +1,7 @@
 <html>
 <body>
-<canvas width="600" height="600"></canvas>
+<canvas width="500" height="500"></canvas>
+
 <script>
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
@@ -22,16 +23,24 @@ for(i = 0; i < 5; i ++) {
 	for(j = 0; j < 5; j ++){
 	
 	
-	x = 100
-	y = 100
+	x = 101
+	y = 101
 	context.beginPath();
 	context.arc(x * j, y * i, radius, 0, 2 * Math.PI);
 	context.strokeStyle = 'black';
 	context.stroke();
 	
-	if(Math.random() < 0.4){
+	context.beginPath();
+	context.arc(x * j, y * i, radius - 15, 0, 2 * Math.PI);
+	context.stroke();
+	
 	context.beginPath();
 	context.arc(x * j, y * i, radius - 25, 0, 2 * Math.PI);
+	context.stroke();
+	
+	if(Math.random() < 0.3){
+	context.beginPath();
+	context.arc(x * j, y * i, radius - 35, 0, 2 * Math.PI);
 	context.strokeStyle = 'red';
 	context.stroke();
 	}
