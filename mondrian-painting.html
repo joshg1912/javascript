@@ -1,16 +1,19 @@
 <html>
 <body>
     <canvas width="600" height="600"></canvas>
+ 
 
 
 
 </body>
 <script>
+
+function paintingOne() {
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
 
 
-function paintingOne() {
+
 
 
     //frame
@@ -102,11 +105,97 @@ yellow.fillRect(2.9,143,26.9,55)
 }
 
 
-paintingOne()
 
 
 
+function paintingTwo() {
+
+const canvas = document.querySelector('canvas');
+const context = canvas.getContext('2d');
 
 
+let rectangle = context
+rectangle.lineWidth = 6;
+rectangle.beginPath()
+rectangle.rect(00,0,280,200);
+rectangle.stroke()
+
+
+
+//horizontal lines
+let horizontalOne = context
+horizontalOne.beginPath()
+horizontalOne.moveTo(280,100)
+horizontalOne.lineTo(0,100)
+horizontalOne.stroke();
+
+let horizontalTwo = context
+horizontalTwo.beginPath()
+horizontalTwo.moveTo(0,160)
+horizontalTwo.lineTo(100,160)
+horizontalTwo.stroke()
+
+
+//vertical lines
+let verticalOne = context
+verticalOne.beginPath()
+verticalOne.moveTo(100,0)
+verticalOne.lineTo(100,201)
+verticalOne.stroke();
+
+let verticalTwo = context
+verticalTwo.beginPath()
+verticalTwo.moveTo(130,100)
+verticalTwo.lineTo(130,202)
+verticalTwo.stroke();
+
+let verticalThree = context
+verticalThree.beginPath();
+verticalThree.moveTo(30,200);
+verticalThree.lineTo(30,160);
+verticalThree.stroke();
+
+
+let red = context
+//colors
+if(Math.random() < 0.5){
+red.fillStyle = 'red'
+red.fillRect(3.2,3.2,95,95)
+} else{ 
+    red.fillStyle = 'blue'
+    red.fillRect(3.2,3.2,95,95)
+}
+
+let yellow = context
+
+if(Math.random() > 0.5){
+yellow.fillStyle = 'yellow'
+yellow.fillRect(132,101,145,97)
+
+} else {
+    yellow.fillStyle = 'black'
+    yellow.fillRect(132,101,145,97)
+}
+
+
+let blue = context
+if(Math.random() > 0.5) {
+blue.fillStyle = 'blue'
+blue.fillRect(3,162,25,35)
+}
+else {
+    blue.fillStyle = 'red'
+    blue.fillRect(3,162,25,35)
+
+}
+
+
+}
+
+if(Math.random() > 0.5) {
+    paintingOne()
+} else {
+    paintingTwo()
+}
 </script>
 </html>
