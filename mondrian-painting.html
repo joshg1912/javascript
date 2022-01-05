@@ -1,0 +1,296 @@
+<html>
+    <title>Mondrian Painting Generator</title>
+    <head> <meta name="viewport" content="width=device-width, initial-scale=1.0" /></head>
+<body>
+    <div class="center">
+        <p>Generate a Mondrian Painting!</p>
+    <canvas width="300" height="300"></canvas>
+  
+    <button onClick="window.location.reload()">Generate Painting</button>
+</div>
+</body>
+
+<style>
+
+    .center {
+        width: 300px;  
+        height: 300px;  
+        display: grid;  
+    }
+
+
+
+</style>
+
+
+
+
+
+<script>
+
+//canvas setup
+const canvas = document.querySelector('canvas');
+const context = canvas.getContext('2d');
+
+//creates a rectangle
+const rectangle = context
+rectangle.lineWidth = 6;
+rectangle.beginPath()
+rectangle.rect(00,0,280,200);
+rectangle.stroke()
+
+
+
+function paintingOne() {
+
+//vertical lines
+let verticalOne = context
+verticalOne.beginPath()
+verticalOne.moveTo(120,200)
+verticalOne.lineTo(120,0)
+verticalOne.stroke();
+
+
+let verticalTwo = context
+verticalTwo.beginPath()
+verticalTwo.moveTo(30,200)
+verticalTwo.lineTo(30,140)
+verticalTwo.stroke();
+
+let verticalThree = context
+verticalThree.beginPath();
+verticalThree.moveTo(190,200)
+verticalThree.lineTo(190,140)
+verticalThree.stroke();
+
+
+//horizontal lines
+let horizontalOne = context
+horizontalOne.beginPath();
+horizontalOne.moveTo(0,80)
+horizontalOne.lineTo(280,80)
+horizontalOne.stroke()
+
+let horizontalTwo = context
+horizontalTwo.beginPath();
+horizontalTwo.moveTo(0,140)
+horizontalTwo.lineTo(280,140)
+horizontalTwo.stroke()
+
+let horizontalThree = context
+horizontalThree.beginPath()
+horizontalThree.moveTo(120,180)
+horizontalThree.lineTo(190,180)
+horizontalThree.stroke() 
+
+
+//colors 
+
+
+const red = context
+
+if(Math.random() > 0.5){
+red.fillStyle = 'red'
+}
+		else {
+		red.fillStyle = 'black'
+	}
+red.fillRect(2.9,2.9,115,73.9)
+
+
+
+const blue = context
+
+if(Math.random() < 0.5){
+	blue.fillStyle = 'blue'
+	}
+		else if (Math.random() < 0.4) {
+		blue.fillStyle = 'red'
+		}
+    else {
+     blue.fillStyle = 'yelow'
+    }
+blue.fillRect(122,142,66,36)
+
+
+const yellow = context
+
+if(Math.random() > 0.5){
+	yellow.fillStyle = 'yellow'
+	}
+		else { yellow.fillStyle = 'red'
+		}
+yellow.fillRect(2.9,143,26.9,55)
+
+}
+
+
+
+
+
+function paintingTwo() {
+//horizontal lines
+let horizontalOne = context
+horizontalOne.beginPath()
+horizontalOne.moveTo(280,100)
+horizontalOne.lineTo(0,100)
+horizontalOne.stroke();
+
+let horizontalTwo = context
+horizontalTwo.beginPath()
+horizontalTwo.moveTo(0,160)
+horizontalTwo.lineTo(100,160)
+horizontalTwo.stroke()
+
+
+//vertical lines
+let verticalOne = context
+verticalOne.beginPath()
+verticalOne.moveTo(100,0)
+verticalOne.lineTo(100,201)
+verticalOne.stroke();
+
+let verticalTwo = context
+verticalTwo.beginPath()
+verticalTwo.moveTo(130,100)
+verticalTwo.lineTo(130,202)
+verticalTwo.stroke();
+
+let verticalThree = context
+verticalThree.beginPath();
+verticalThree.moveTo(30,200);
+verticalThree.lineTo(30,160);
+verticalThree.stroke();
+
+
+let red = context
+//colors
+if(Math.random() < 0.5){
+red.fillStyle = 'red'
+red.fillRect(3.2,3.2,95,95)
+} else{ 
+    red.fillStyle = 'yellow'
+    red.fillRect(3.2,3.2,95,95)
+}
+
+let yellow = context
+
+if(Math.random() > 0.5){
+yellow.fillStyle = 'yellow'
+yellow.fillRect(132,101,145,97)
+
+} else {
+    yellow.fillStyle = 'black'
+    yellow.fillRect(132,101,145,97)
+}
+
+
+let blue = context
+if(Math.random() > 0.5) {
+blue.fillStyle = 'blue'
+blue.fillRect(3,162,25,35)
+}
+else {
+    blue.fillStyle = 'red'
+    blue.fillRect(3,162,25,35)
+
+}
+
+
+}
+
+
+
+
+
+
+function paintingThree() {
+
+let horizontalOne = context;
+horizontalOne.beginPath()
+horizontalOne.moveTo(0,140)
+horizontalOne.lineTo(210,140)
+horizontalOne.stroke()
+
+let horizontalTwo = context;
+horizontalTwo.beginPath()
+horizontalTwo.moveTo(0,85)
+horizontalTwo.lineTo(280,85)
+horizontalTwo.stroke()
+
+let horizontalThree = context;
+horizontalThree.beginPath()
+horizontalThree.moveTo(230,45)
+horizontalThree.lineTo(280,45)
+horizontalThree.stroke()
+
+
+let verticalOne = context
+verticalOne.beginPath()
+verticalOne.moveTo(210,200)
+verticalOne.lineTo(210,0)
+verticalOne.stroke()
+
+let verticalTwo = context
+verticalTwo.beginPath()
+verticalTwo.moveTo(230,200)
+verticalTwo.lineTo(230,0)
+verticalTwo.stroke()
+
+let verticalThree = context
+verticalThree.beginPath()
+verticalThree.moveTo(30,85)
+verticalThree.lineTo(30,200)
+verticalThree.stroke()
+
+let red = context
+
+if(Math.random() < 0.5){
+red.fillStyle = "red"
+red.fillRect(2.5,1.5,205,81)
+} else {
+    red.fillStyle = 'blue'
+}
+
+
+let black = context
+
+if(Math.random() > 0.5){
+black.fillStyle = "black"
+black.fillRect(210,87,20,111)
+} else {
+    black.fillStyle = 'white'
+    black.fillRect(210,87,20,111)
+}
+
+let blue = context
+
+if(Math.random() < 0.5){
+blue.fillStyle = "blue"
+blue.fillRect(2.1,141,26,57)
+} else {
+    blue.fillStyle = 'black'
+    blue.fillRect(2.1,141,26,57)
+}
+
+let yellow = context
+
+if(Math.random() > 0.5) {
+yellow.fillStyle = "yellow"
+yellow.fillRect(232.9,48,45,33.9)
+} else {
+    yellow.fillStyle = 'blue'
+    yellow.fillRect(232.9,48,45,33.9)
+}
+}
+
+
+if(Math.random() > 0.5) {
+    paintingOne()
+} else if(Math.random() < 0.5) {
+    paintingTwo()
+} else {
+    paintingThree()
+}
+</script>
+</html>
