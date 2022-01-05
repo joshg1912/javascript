@@ -27,24 +27,25 @@ padding: 10px;
 
 
 </style>
+
+
+
+
+
 <script>
 
-function paintingOne() {
+//canvas setup
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
 
-
-
-
-
-    //frame
-let rectangle = context
+//creates a rectangle
+const rectangle = context
 rectangle.lineWidth = 6;
 rectangle.beginPath()
 rectangle.rect(00,0,280,200);
 rectangle.stroke()
 
-
+function paintingOne() {
 
 //vertical lines
 let verticalOne = context
@@ -87,9 +88,10 @@ horizontalThree.lineTo(190,180)
 horizontalThree.stroke() 
 
 
-const red = context
+//colors 
 
-//colors
+
+const red = context
 
 if(Math.random() > 0.5){
 red.fillStyle = 'red'
@@ -100,9 +102,10 @@ red.fillStyle = 'red'
 red.fillRect(2.9,2.9,115,73.9)
 
 
+
 const blue = context
 
-if(Math.random() > 0.5){
+if(Math.random() < 0.5){
 	blue.fillStyle = 'blue'
 	}
 		else if (Math.random() < 0.4) {
@@ -117,7 +120,7 @@ blue.fillRect(122,142,66,36)
 const yellow = context
 
 if(Math.random() > 0.5){
-	yellow.fillStyle = 'yellow'
+	yellow.fillStyle = 'red'
 	}
 		else { yellow.fillStyle = 'black'
 		}
@@ -130,19 +133,6 @@ yellow.fillRect(2.9,143,26.9,55)
 
 
 function paintingTwo() {
-
-const canvas = document.querySelector('canvas');
-const context = canvas.getContext('2d');
-
-
-let rectangle = context
-rectangle.lineWidth = 6;
-rectangle.beginPath()
-rectangle.rect(00,0,280,200);
-rectangle.stroke()
-
-
-
 //horizontal lines
 let horizontalOne = context
 horizontalOne.beginPath()
@@ -183,7 +173,7 @@ if(Math.random() < 0.5){
 red.fillStyle = 'red'
 red.fillRect(3.2,3.2,95,95)
 } else{ 
-    red.fillStyle = 'blue'
+    red.fillStyle = 'yellow'
     red.fillRect(3.2,3.2,95,95)
 }
 
@@ -214,19 +204,11 @@ else {
 }
 
 
+
+
+
+
 function paintingThree() {
-const canvas = document.querySelector('canvas');
-const context = canvas.getContext('2d');
-
-
-let rectangle = context
-
-rectangle.lineWidth = 5;
-rectangle.beginPath()
-rectangle.rect(0,0,280,200);
-rectangle.stroke()
-
-
 
 let horizontalOne = context;
 horizontalOne.beginPath()
@@ -286,8 +268,10 @@ yellow.fillRect(232.9,48,45,33.9)
 
 if(Math.random() > 0.5) {
     paintingOne()
-} else {
+} else if(Math.random() < 0.5) {
     paintingTwo()
+} else {
+    paintingThree()
 }
 </script>
 </html>
