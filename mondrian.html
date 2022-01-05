@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta http-equiv="refresh" content="2" >
+    </head>
+<body>
+    <div class="painting">
+    <canvas width="400" height="400"></canvas>
+    </div>
+<script>
+
+
+
+
+function paintingThree() {
+const canvas = document.querySelector('canvas');
+const context = canvas.getContext('2d');
+
+
+let rectangle = context
+
+rectangle.lineWidth = 5;
+rectangle.beginPath()
+rectangle.rect(0,0,280,200);
+rectangle.stroke()
+
+
+
+let horizontalOne = context;
+horizontalOne.beginPath()
+horizontalOne.moveTo(0,140)
+horizontalOne.lineTo(210,140)
+horizontalOne.stroke()
+
+let horizontalTwo = context;
+horizontalTwo.beginPath()
+horizontalTwo.moveTo(0,85)
+horizontalTwo.lineTo(280,85)
+horizontalTwo.stroke()
+
+let horizontalThree = context;
+horizontalThree.beginPath()
+horizontalThree.moveTo(230,45)
+horizontalThree.lineTo(280,45)
+horizontalThree.stroke()
+
+
+let verticalOne = context
+verticalOne.beginPath()
+verticalOne.moveTo(210,200)
+verticalOne.lineTo(210,0)
+verticalOne.stroke()
+
+let verticalTwo = context
+verticalTwo.beginPath()
+verticalTwo.moveTo(230,200)
+verticalTwo.lineTo(230,0)
+verticalTwo.stroke()
+
+let verticalThree = context
+verticalThree.beginPath()
+verticalThree.moveTo(30,85)
+verticalThree.lineTo(30,200)
+verticalThree.stroke()
+
+let red = context
+red.fillStyle = "red"
+red.fillRect(2.5,1.5,205,81)
+
+
+let black = context
+black.fillStyle = "black"
+black.fillRect(210,87,20,111)
+
+let blue = context
+blue.fillStyle = "blue"
+blue.fillRect(2.1,141,26,57)
+
+let yellow = context
+yellow.fillStyle = "yellow"
+yellow.fillRect(232.9,48,45,33.9)
+}
+
+paintingThree()
+
+</script>
+</body>
+
+</html>
