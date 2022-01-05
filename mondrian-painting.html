@@ -1,16 +1,22 @@
 <html>
     <title>Mondrian Painting Generator</title>
+    <head> <meta name="viewport" content="width=device-width, initial-scale=1.0" /></head>
 <body>
     <h1>Generate a Mondrian Painting!</h1>
     <div class="center">
         
     <canvas width="300" height="300"></canvas>
+    <div class="button-center">
     <button onClick="window.location.reload()">Generate Painting</button>
-
+</div>
  </div>
 </body>
 
 <style>
+    html,body{ 
+        margin:0; padding:0; height:100%; width:100%; 
+    }
+
 h1 {
     display: block;
   margin-left: auto;
@@ -25,12 +31,13 @@ h1 {
   padding-top: 100px;
   width: 50%;
 }
- button {
-     display: block;
-     margin-left: auto;
-     margin-right: 80%;
- }
 
+.button-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%
+}
 
 </style>
 
