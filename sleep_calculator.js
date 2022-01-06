@@ -52,11 +52,11 @@ function calculateSleepDebt(){
 	return 'Youre right on track'}
 	     else if(getActualSleepHours() < idealSleepHours()){
 	     let difference = idealSleepHours() - getActualSleepHours()
-	     return `Youre not sleeping enough! Add ${difference} hours to your sleep schedule to get on track.`
+	     return `You/'re not sleeping enough! Add ${difference} hours to your sleep schedule to get on track.`
 	     }
 	          else if(idealSleepHours() > getActualSleepHours()){
 	          let difference = getActualSleepHours() - idealSleepHours()
-	          return `Youre over sleeping by ${difference} hours!`
+	          return `You/'re over sleeping by ${difference} hours!`
 	          }
 }
 

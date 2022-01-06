@@ -26,6 +26,7 @@ for(i = 0; i < 5; i ++){
 	
 	//rectangle syntax: rect(X, Y, Height, Width)
 	context.rect(x, y, h, w);
+	//uncomment this to turn back to white
 	context.strokeStyle= 'white'
 	context.stroke();
 	
@@ -36,6 +37,7 @@ for(i = 0; i < 5; i ++){
 	context.beginPath();
 	context.rect(x + off / 2, y + off / 2, h - off, w - off)
 	context.fillRect(x + 8, y + 8, h - 16, w - 16)
+	//uncomment this to turn back to white
 	context.strokeStyle= 'white'
 	context.stroke();
 	}

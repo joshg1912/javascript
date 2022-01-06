@@ -63,8 +63,8 @@ function actualSleepHours() {
      let difference = idealSleepHours() - actualSleepHours();
      document.getElementById("sleepdebtresult").innerHTML = `Youre under sleeping! Add ${difference} hours to your sleep schedule to get on track.`
    }
-   else if (idealSleepHours() > actualSleepHours()) {
-     let difference = idealSleepHours() - actualSleepHours();
+   else if (actualSleepHours() > idealSleepHours()) {
+     let difference = actualSleepHours() - idealSleepHours();
      document.getElementById("sleepdebtresult").innerHTML = `Youre over sleeping by ${difference} hours!`
    }
  }
