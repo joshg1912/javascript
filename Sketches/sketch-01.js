@@ -5,7 +5,7 @@ const settings = {
 };
 const sketch = () => {
   return ({ context, width, height }) => {
-    context.fillStyle = 'white';
+    context.fillStyle = 'black';
     context.fillRect(0, 0, width, height);
     
     
@@ -26,6 +26,7 @@ for(i = 0; i < 5; i ++){
 	
 	//rectangle syntax: rect(X, Y, Height, Width)
 	context.rect(x, y, h, w);
+	context.strokeStyle= 'white'
 	context.stroke();
 	
 	
@@ -35,6 +36,7 @@ for(i = 0; i < 5; i ++){
 	context.beginPath();
 	context.rect(x + off / 2, y + off / 2, h - off, w - off)
 	context.fillRect(x + 8, y + 8, h - 16, w - 16)
+	context.strokeStyle= 'white'
 	context.stroke();
 	}
 	}
