@@ -4,6 +4,12 @@ const settings = {
   dimensions: [ 2048, 2048 ]
 };
 
+
+const degToRad = (degrees) => {
+  return degrees / 180 * Math.PI
+}
+
+
 const sketch = () => {
   return ({ context, width, height }) => {
     context.fillStyle = 'white';
@@ -13,17 +19,25 @@ const sketch = () => {
 
     const x = width * 0.5
     const y = height * 0.5
-    const w = width * 0.3
-    const h = height * 0.3
+    const w = width * 0.01
+    const h = height * 0.1
+
+
+    const num = 12;
+
+    for(let i = 0; i < num; i++){
+      const slice = degToRad(360 / num);
+      const angle = slice * i;
+    
     context.save()
     context.translate(x,y)
-    context.rotate(0.3)
+    context.rotate(angle);
 
     context.beginPath();
     context.rect(-w / 2, -h / 2, w, h);
     context.fill()
     context.restore()
-    ;
+    }
   };
 };
 
