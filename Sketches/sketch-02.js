@@ -17,26 +17,32 @@ const sketch = () => {
     
     context.fillStyle = 'black'
 
-    const x = width * 0.5
-    const y = height * 0.5
+    const cx = width * 0.5
+    const cy = height * 0.5
+
     const w = width * 0.01
     const h = height * 0.1
+    let x,y;
 
 
     const num = 12;
+    const radius = width * 0.3;
 
     for(let i = 0; i < num; i++){
       const slice = degToRad(360 / num);
       const angle = slice * i;
     
-    context.save()
-    context.translate(x,y)
-    context.rotate(angle);
 
-    context.beginPath();
-    context.rect(-w / 2, -h / 2, w, h);
-    context.fill()
-    context.restore()
+      x = cx + radius * Math.sin(angle);
+      y = cy + radius * Math.cos(angle);
+      context.save()
+      context.translate(x,y)
+      context.rotate(-angle);
+
+      context.beginPath();
+      context.rect(-w / 2, -h / 2, w, h);
+      context.fill()
+      context.restore()
     }
   };
 };
