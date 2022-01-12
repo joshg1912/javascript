@@ -15,12 +15,14 @@ const sketch = () => {
     const y = height * 0.5
     const w = width * 0.3
     const h = height * 0.3
-
+    context.save()
     context.translate(x,y)
+    context.rotate(0.3)
 
     context.beginPath();
-    context.rect(0, 0, w, h);
+    context.rect(-w / 2, -h / 2, w, h);
     context.fill()
+    context.restore()
     ;
   };
 };
