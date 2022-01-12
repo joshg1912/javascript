@@ -44,11 +44,24 @@ const sketch = () => {
       context.save()
       context.translate(x,y)
       context.rotate(-angle);
-      context.scale(random.range(3,1),1)
+      context.scale(random.range(1,3),1)
 
       context.beginPath();
-      context.rect(-w / 2, -h / 2, w, h);
+      context.rect(-w / 2, random.range(0, -h / 2), w, h);
       context.fill()
+      context.restore()
+
+
+      context.save()
+      context.translate(cx,cy)
+      context.rotate(-angle)
+
+      context.lineWidth = random.range(10,2)
+
+      context.beginPath()
+      context.arc(0, 0, radius * random.range(0.7, 1.3), slice * random.range(1, -5), slice * random.range(1,5));
+      context.stroke();
+
       context.restore()
     }
   };
