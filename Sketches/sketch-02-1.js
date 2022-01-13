@@ -8,7 +8,7 @@ const settings = {
 
 const sketch = () => {
   return ({ context, width, height }) => {
-    context.fillStyle = 'white';
+    context.fillStyle = 'black';
     context.fillRect(0, 0, width, height)
     
     context.fillStyle = 'black'
@@ -32,14 +32,15 @@ const sketch = () => {
       x = cx + radius * Math.sin(angle);
       y = cy + radius * Math.cos(angle);
 
+      
       context.save()
       context.translate(x,y)
       context.rotate(-angle);
-      context.scale(random.range(2,1.9),2 )
+      context.scale(random.range(2,20),2 )
 
       context.beginPath();
       context.rect(-w / 2, random.range(0, -h / 2), w, h);
-      context.fillStyle = 'blue'
+      context.fillStyle = 'black'
       context.fill()
       context.restore()
 
@@ -48,12 +49,12 @@ const sketch = () => {
       context.translate(cx,cy)
       context.rotate(-angle)
 
-      context.lineWidth = random.range(1, 8)
+      context.lineWidth = random.range(10, 1)
 
       context.beginPath()
-      context.arc(0, 0, radius * random.range(1.8, 1.6), slice * random.range(1, -5), slice * random.range(1,5));
+      context.arc(0, 0, radius * random.range(1.9, 0.9), slice * random.range(1, -1), slice * random.range(10,100));
 
-      context.strokeStyle = 'red'
+      context.strokeStyle = 'white'
       context.stroke();
 
       context.restore()
