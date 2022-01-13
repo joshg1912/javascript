@@ -21,7 +21,7 @@ const sketch = () => {
     let x,y;
 
 
-    const num = 12;
+    const num = 80;
     const radius = width * 0.3;
 
     for(let i = 0; i < num; i++){
@@ -35,10 +35,11 @@ const sketch = () => {
       context.save()
       context.translate(x,y)
       context.rotate(-angle);
-      context.scale(random.range(1,3),1)
+      context.scale(random.range(2,1.9),2 )
 
       context.beginPath();
       context.rect(-w / 2, random.range(0, -h / 2), w, h);
+      context.fillStyle = 'blue'
       context.fill()
       context.restore()
 
@@ -47,11 +48,12 @@ const sketch = () => {
       context.translate(cx,cy)
       context.rotate(-angle)
 
-      context.lineWidth = random.range(10,2)
+      context.lineWidth = random.range(1, 8)
 
       context.beginPath()
-      context.arc(0, 0, radius * random.range(0.7, 1.3), slice * random.range(1, -5), slice * random.range(1,5));
-      context.strokeStyle = 'pink'
+      context.arc(0, 0, radius * random.range(1.8, 1.6), slice * random.range(1, -5), slice * random.range(1,5));
+
+      context.strokeStyle = 'red'
       context.stroke();
 
       context.restore()
